@@ -1,8 +1,11 @@
-# todo_app
+This is a simple todo app using flutter bloc architecture and json-server from node.
 
-A new Flutter project.
+### Requirements:
+* flutter_bloc:
+* http:
+* toast:
 
-## Getting Started
+### Getting Started
 
 This project is a starting point for a Flutter application.
 
