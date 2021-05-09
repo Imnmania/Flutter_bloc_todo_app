@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:toast/toast.dart';
 import 'package:todo_app/cubit/add_todo_cubit.dart';
 
 class AddTodoScreen extends StatelessWidget {
@@ -15,7 +16,15 @@ class AddTodoScreen extends StatelessWidget {
         listener: (context, state) {
           if (state is TodoAdded) {
             Navigator.pop(context);
-            return;
+          } else if (state is AddTodoError) {
+            Toast.show(
+              state.error,
+              context,
+              duration: 3,
+              backgroundColor: Colors.black54,
+              gravity: Toast.BOTTOM,
+              backgroundRadius: 10,
+            );
           }
         },
         child: Padding(
@@ -44,11 +53,15 @@ class AddTodoScreen extends StatelessWidget {
           child: BlocBuilder<AddTodoCubit, AddTodoState>(
             builder: (context, state) {
               if (state is AddingTodo) {
-                return CircularProgressIndicator();
+                return CircularProgressIndicator(
+                  backgroundColor: Colors.white,
+                );
               }
               return Text("Add");
             },
           ),
+          height: 50,
+          minWidth: double.infinity,
           color: Theme.of(context).primaryColor,
           textColor: Colors.white,
           shape: RoundedRectangleBorder(

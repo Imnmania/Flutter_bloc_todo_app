@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:todo_app/data/models/todo_model.dart';
 // import 'package:todo_app/data/network_service.dart';
 // import 'package:todo_app/data/repository.dart';
-import 'package:todo_app/presentation/screens/add_todo.dart';
-import 'package:todo_app/presentation/screens/edit_todo.dart';
+import 'package:todo_app/presentation/screens/add_todo_screen.dart';
+import 'package:todo_app/presentation/screens/edit_todo_screen.dart';
 import 'package:todo_app/presentation/screens/home_screen.dart';
 
 class AppRouter {
@@ -24,7 +25,11 @@ class AppRouter {
         break;
 
       case '/editTodo':
-        return MaterialPageRoute(builder: (_) => EditTodoScreen());
+        final todo = routeSettings.arguments as TodoModel;
+        return MaterialPageRoute(
+            builder: (_) => EditTodoScreen(
+                  todo: todo,
+                ));
         break;
 
       default:

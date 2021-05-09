@@ -1,38 +1,8 @@
 {
   "todos": [
     {
-      "todo": "Learn Mango",
-      "isCompleted": "true",
-      "id": 1
-    },
-    {
-      "todo": "Learn FastAPI",
-      "isCompleted": "true",
-      "id": 2
-    },
-    {
-      "todo": "Do this",
-      "isCompleted": "true",
-      "id": 3
-    },
-    {
-      "todo": "Do that",
-      "isCompleted": "true",
-      "id": 4
-    },
-    {
-      "todo": "asdasdasd",
+      "todo": "1234567--0000",
       "isCompleted": "false",
-      "id": 5
-    },
-    {
-      "todo": "123sdf",
-      "isCompleted": "true",
-      "id": 6
-    },
-    {
-      "todo": "1234",
-      "isCompleted": "true",
       "id": 7
     },
     {
@@ -41,8 +11,8 @@
       "id": 8
     },
     {
-      "todo": " 223",
-      "isCompleted": "false",
+      "todo": "Yahoooo!",
+      "isCompleted": "true",
       "id": 9
     },
     {
@@ -61,24 +31,19 @@
       "id": 12
     },
     {
-      "todo": "111111111111",
+      "todo": "1111111111113",
       "isCompleted": "true",
       "id": 13
     },
     {
-      "todo": "opopo",
+      "todo": "Oppai",
       "isCompleted": "false",
       "id": 14
     },
     {
-      "todo": "mr popo",
-      "isCompleted": "true",
+      "todo": "This is task 99",
+      "isCompleted": "false",
       "id": 15
-    },
-    {
-      "todo": "Goku",
-      "isCompleted": "true",
-      "id": 16
     }
   ]
 }

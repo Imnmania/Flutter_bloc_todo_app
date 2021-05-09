@@ -28,4 +28,13 @@ class Repository {
 
     return TodoModel.fromJson(todoMap);
   }
+
+  Future<bool> deleteTodo(int id) async {
+    return await networkService.deleteTodo(id);
+  }
+
+  Future<bool> updateTodo(String message, int id) async {
+    final patchObj = {"todo": message};
+    return await networkService.patchTodo(patchObj, id);
+  }
 }

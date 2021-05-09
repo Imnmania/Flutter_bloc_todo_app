@@ -32,4 +32,13 @@ class NetworkService {
       throw e;
     }
   }
+
+  Future<bool> deleteTodo(int id) async {
+    try {
+      await http.delete("$baseUrl/todos/$id");
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
 }

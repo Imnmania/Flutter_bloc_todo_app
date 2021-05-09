@@ -31,7 +31,8 @@ class HomeScreen extends StatelessWidget {
               itemBuilder: (context, index) {
                 return GestureDetector(
                   onTap: () {
-                    Navigator.pushNamed(context, '/editTodo');
+                    Navigator.pushNamed(context, '/editTodo',
+                        arguments: todos[index]);
                   },
                   child: Dismissible(
                     key: Key("${todos[index].id}"),

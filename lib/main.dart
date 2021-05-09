@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:todo_app/cubit/add_todo_cubit.dart';
+import 'package:todo_app/cubit/edit_todo_cubit.dart';
 import 'package:todo_app/cubit/todos_cubit.dart';
 import 'package:todo_app/data/network_service.dart';
 import 'package:todo_app/data/repository.dart';
@@ -27,9 +28,17 @@ class MyApp extends StatelessWidget {
           create: (context) => TodosCubit(repository: repository),
         ),
         BlocProvider(
-            create: (context) => AddTodoCubit(
-                repository: repository,
-                todosCubit: context.read<TodosCubit>())),
+          create: (context) => AddTodoCubit(
+            repository: repository,
+            todosCubit: context.read<TodosCubit>(),
+          ),
+        ),
+        BlocProvider(
+          create: (context) => EditTodoCubit(
+            repository: repository,
+            todosCubit: context.read<TodosCubit>(),
+          ),
+        ),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
