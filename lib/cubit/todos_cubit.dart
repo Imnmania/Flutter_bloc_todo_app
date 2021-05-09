@@ -24,24 +24,24 @@ class TodosCubit extends Cubit<TodosState> {
       if (isChanged) {
         // todo.isCompleted = !todo.isCompleted;
         fetchTodos();
-        updateTodoList();
+        // updateTodoList();
       }
     });
   }
 
-  void updateTodoList() {
-    final currentState = state;
-    if (currentState is TodosLoaded) {
-      emit(TodosLoaded(todos: currentState.todos));
-    }
-  }
+  // void updateTodoList() {
+  //   final currentState = state;
+  //   if (currentState is TodosLoaded) {
+  //     emit(TodosLoaded(todos: currentState.todos));
+  //   }
+  // }
 
-  void addTodo(TodoModel todo) {
-    final currentState = state;
-    if (currentState is TodosLoaded) {
-      final todoList = currentState.todos;
-      todoList.add(todo);
-      emit(TodosLoaded(todos: todoList));
-    }
-  }
+  // void addTodo(TodoModel todo) {
+  //   final currentState = state;
+  //   if (currentState is TodosLoaded) {
+  //     final todoList = currentState.todos;
+  //     todoList.add(todo);
+  //     emit(TodosLoaded(todos: todoList));
+  //   }
+  // }
 }

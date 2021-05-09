@@ -26,7 +26,8 @@ class AddTodoCubit extends Cubit<AddTodoState> {
     Timer(Duration(seconds: 2), () {
       repository.addTodo(message).then((todo) {
         if (todo != null) {
-          todosCubit.addTodo(todo);
+          // todosCubit.addTodo(todo);
+          todosCubit.fetchTodos();
           emit(TodoAdded());
         }
       });
